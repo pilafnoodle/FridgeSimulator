@@ -4,28 +4,16 @@
 #include <vector>
 using namespace std;
 
-class Food
-{
-    protected:
-        string name;
-        int lifetime;
-        int daysInFridge;
 
-    public:
-        Food(string n, int t){
-            this->name = n;
-            this->lifetime = t;
+Food::Food(string n, int t){
+    this->name=n;
+    this->lifetime=t;
+}
 
-        }
-};
+// RawFood::RawFood(string n, int t)
+// {
+//     name=n;
+//     lifetime=t;
+// }
 
-class RawFood: public Food
-{
-    public:
-};
 
-class CookedFood: public Food
-{
-    public:
-        vector<RawFood> ingredients;
-};
