@@ -3,20 +3,20 @@
 #include <iostream>
 
 void putNewItemsInStorage(Storage s){
-    cout<<"You are putting items inside your "<<s.getName();<<endl;
-    string name;
-    string category;
-    while(!endInput){
-        cout<<"enter name of item(q to quit): "<<endl;
-        cin>>name;
-        if(name="q"){
-            break;
-        }
-        cout<<"enter category (v for vegetables, d for dairy, m for meat, g for grains and p for preserved food)"<<endl;
-        cin>>category;
-        RawFood newItem(name,category);
-        s.addItem(newItem);      
-    }
+    // cout<<"You are putting items inside your "<<s.getName();<<endl;
+    // string name;
+    // string category;
+    // while(input!="q"){
+    //     cout<<"enter name of item(q to quit): "<<endl;
+    //     cin>>name;
+    //     if(name="q"){
+    //         break;
+    //     }
+    //     cout<<"enter category (v for vegetables, d for dairy, m for meat, g for grains and p for preserved food)"<<endl;
+    //     cin>>category;
+    //     RawFood newItem(name,category);
+    //     s.addItem(newItem);      
+    // }
 }
 
 void printMenu(){

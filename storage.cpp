@@ -1,4 +1,8 @@
 class Storage{
+
+    string name;
+    vector<Food> contents;
+
     Storage(){
 
     }
@@ -8,4 +12,4 @@ class Storage{
     lookAtStorage(){
         
     }
-}
+};

@@ -12,9 +12,9 @@ class Food
         int daysInFridge;
 
     public:
-        Food(string, int){
-            name = n;
-            lifetime = t;
+        Food(string n, int t){
+            this->name = n;
+            this->lifetime = t;
         }
 };
 
