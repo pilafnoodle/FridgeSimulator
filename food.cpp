@@ -15,6 +15,7 @@ class Food
         Food(string n, int t){
             this->name = n;
             this->lifetime = t;
+
         }
 };
 
