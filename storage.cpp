@@ -9,10 +9,10 @@ Storage::Storage(string name, int capacity, double spoilRate)
     this->spoilRate = spoilRate;
 }
 
-string Storage::getName()
+/*string Storage::getName()
 {
     return name;
-}
+}*/
 
 void Storage::addFood(Food &foodItem)
 {
@@ -39,10 +39,11 @@ void Storage::removeFood(string name)
     {
         if(items[i].getName() == name) {
             check = true;
-
             items.erase(items.begin() + i);
 
-            std::cout << "Removed food item " << name;
+            std::cout << "Removed food item " << name << std::endl;
+            --i;
+            break;
         }
     }
 }
