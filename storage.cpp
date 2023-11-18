@@ -33,11 +33,17 @@ void Storage::addFood(Food &foodItem)
 
 void Storage::removeFood(string name)
 {
+    bool check = false;
+
     for (int i = 0; i < static_cast<int>(items.size()); i++)
     {
-        // if(items[i].getName() == name) {
-            
-        // }
+        if(items[i].getName() == name) {
+            check = true;
+
+            items.erase(items.begin() + i);
+
+            std::cout << "Removed food item " << name;
+        }
     }
 }
 
