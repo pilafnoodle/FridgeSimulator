@@ -9,11 +9,6 @@ Storage::Storage(string name, int capacity, double spoilRate)
     this->spoilRate = spoilRate;
 }
 
-/*string Storage::getName()
-{
-    return name;
-}*/
-
 void Storage::addFood(Food &foodItem)
 {
     // Doesn't exceed capacity
