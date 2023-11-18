@@ -37,12 +37,6 @@ int main(){
     Storage pantry("Pantry",20,5.0);
     Storage fridge("Fridge",8,2.0);
     
-    // vector<Storage> container={fridge,freezer,pantry};
-
-    
-    // putNewItemsInStorage(fridge);//ask if user wants to put anything in storage
-    // fridge.displayItems();
-    // return 0;
     bool endOfDay=false;
     while(daysPassed<365){
 
@@ -55,7 +49,7 @@ int main(){
             cin>>input;
             switch(input){
                 case 'c':
-                    // cookFood();
+                    // cook(); implement this
                 case 's':
                     endOfDay=true;
                     
@@ -65,7 +59,7 @@ int main(){
         freezer.displayItems();
         fridge.displayItems();
         cout<<endl;
-        // incrementEachDaysInFridge();
+        // incrementEachDaysInFridge(); implement this
         daysPassed++;
     }
     return 0;
