@@ -7,7 +7,6 @@ using namespace std;
 Food::Food(string n, string category){
     this->name=n;
     this->category=category;
-
     // this->lifetime=t;
 }
 
@@ -24,7 +23,3 @@ string Food::getName(){
 int Food::getDaysInFridge(){
     return daysInFridge;
 }
-
-
-
-
