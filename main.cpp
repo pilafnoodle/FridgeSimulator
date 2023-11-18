@@ -49,7 +49,7 @@ int main(){
             cin>>input;
             switch(input){
                 case 'c':
-                    // cook(); implement this
+                    cook();
                 case 's':
                     endOfDay=true;
                     
@@ -59,7 +59,7 @@ int main(){
         freezer.displayItems();
         fridge.displayItems();
         cout<<endl;
-        // incrementEachDaysInFridge(); implement this
+        incrementEachDaysInFridge();
         daysPassed++;
     }
     return 0;
