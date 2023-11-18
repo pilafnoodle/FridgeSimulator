@@ -14,14 +14,14 @@ string Storage::getName()
     return name;
 }
 
-void Storage::addFood(Food& food)
+void Storage::addFood(Food &foodItem)
 {
     // Doesn't exceed capacity
     if (items.size() < capacity)
     {
-        items.push_back(food);
+        items.push_back(foodItem);
 
-        std::cout << "New addition: " << getName() << endl;
+        std::cout << "New addition: " << getName() << std::endl;
     }
 
     // Exceeds capacity
@@ -31,9 +31,15 @@ void Storage::addFood(Food& food)
     }
 }
 
-/*void Storage::removeFood(string name) {
-
-}*/
+void Storage::removeFood(string name)
+{
+    for (int i = 0; i < static_cast<int>(items.size()); i++)
+    {
+        // if(items[i].getName() == name) {
+            
+        // }
+    }
+}
 
 void Storage::displayItems()
 {

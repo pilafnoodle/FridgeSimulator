@@ -20,7 +20,6 @@ class Storage {
         int capacity;
         double spoilRate;
         std::vector<Food> items;
-
 };
 
 #endif
