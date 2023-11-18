@@ -1,5 +1,5 @@
-#include "food.h"
-#include "storage.h"
+#include "food.cpp"
+#include "storage.cpp"
 #include <iostream>
 
 void putNewItemsInStorage(Storage s){
@@ -27,28 +27,35 @@ void printMenu(){
 
 }
 
-void putAnythingIntoStorage(){
-    string input;
-    cout<<"do you want to put anything into storage?"<<endl;
-
-}
 
 int main(){
     int daysPassed=0;
+    Storage freezer;
+    Storage pantry;
+    Storage fridge;
+    vector<storage> containers={fridge,freezer,pantry};
 
-    putAnythingIntoStorage();
-    putNewItemsInStorage(Storage s);
-    printMenu();
-    char input;
-    cin>>input;
-    switch(input){
-        case 'c':
-            cookFood();
-        case 'l':
-            lookAtStorage();
-        case 's':
-            break;
-    }   
-
+    while(daysPassed<365){
+    
+        showStatusOfFridge();
+        for(/*for each storage item s*/){
+            putNewItemsInStorage(Storage s);//ask if user wants to put anything in storage
+            printMenu();
+            char input;
+            cin>>input;
+            switch(input){
+                case 'c':
+                    cookFood();
+                case 'l':
+                    lookAtStorage();
+                case 's':
+                    daysPassed++;
+                    incrementEachDaysInFridge();
+                    break;
+            }   
+        }
+    }
 }
+
+
 

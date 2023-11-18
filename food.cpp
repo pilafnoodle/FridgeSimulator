@@ -4,19 +4,15 @@
 #include <vector>
 using namespace std;
 
-/*
-cout << "What food are you putting into the fridge?" << endl;
-getline(cin, name);         // Asks user for food being placed in fridge
-*/
-
 class Food
 {
     protected:
         string name;
         int lifetime;
+        int daysInFridge;
+
     public:
-        void setValue (string n, int t)
-        {
+        Food(string, int){
             name = n;
             lifetime = t;
         }
@@ -25,7 +21,6 @@ class Food
 class RawFood: public Food
 {
     public:
-        int daysInFridge;
 };
 
 class CookedFood: public Food
