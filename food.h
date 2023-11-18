@@ -7,7 +7,7 @@ using namespace std;
 
 class Food
 {
-    protected:
+    private:
         string name;
         string category;
         int lifetime;
@@ -22,8 +22,7 @@ class Food
 class RawFood: public Food
 {
     public:
-        RawFood(string,string);
-
+        RawFood(string,string); 
 };
 
 class CookedFood: public Food
