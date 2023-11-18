@@ -3,12 +3,6 @@
 #include "food.h"
 #include <vector>
 using namespace std;
-
-/*
-cout << "What food are you putting into the fridge?" << endl;
-getline(cin, name);         // Asks user for food being placed in fridge
-*/
-
 class Food
 {
     protected:
