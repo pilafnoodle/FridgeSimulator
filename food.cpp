@@ -15,7 +15,7 @@ class Food
         string name;
         int lifetime;
     public:
-        void setValue (string n, int t)
+        Food(string n, int t)
         {
             name = n;
             lifetime = t;
