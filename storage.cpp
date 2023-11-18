@@ -9,27 +9,35 @@ Storage::Storage(string name, int capacity, double spoilRate)
     this->spoilRate = spoilRate;
 }
 
-string Storage::getName() {
+string Storage::getName()
+{
     return name;
 }
 
-void Storage::addFood(Food food)
+void Storage::addFood(Food& food)
 {
     // Doesn't exceed capacity
     if (items.size() < capacity)
     {
         items.push_back(food);
-        // std::cout << "New addition: " << food.getItem();
-        // Exceeds capacity
+
+        std::cout << "New addition: " << getName() << endl;
     }
 
+    // Exceeds capacity
     else
     {
-        std::cout << "There is no space in the storage.";
+        std::cout << "There is no space in the storage to add " << getName() << ".";
     }
 }
 
-/*void Storage::displayContents() const {
-    std::cout << "Storage Items:\n":
-    for()
-}*/
+void Storage::displayItems()
+{
+    std::cout << "Storage:" << endl;
+
+    for (int i = 0; i < items.size(); i++)
+    {
+        Food &item = items[i]; //
+        // std::cout << item.getName() << endl;
+    }
+}
