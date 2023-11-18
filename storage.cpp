@@ -29,7 +29,17 @@ void Storage::addFood(Food food)
     }
 }
 
-/*void Storage::displayContents() const {
-    std::cout << "Storage Items:\n":
-    for()
+/*void Storage::removeFood(string name) {
+
 }*/
+
+void Storage::displayItems()
+{
+    std::cout << "Storage:" << endl;
+
+    for (int i = 0; i < items.size(); i++)
+    {
+        Food &item = items[i]; //
+        // std::cout << item.getName() << endl;
+    }
+}
