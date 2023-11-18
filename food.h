@@ -15,8 +15,12 @@ class Food
 
     public:
         Food(string,string);
-        string getName();
+        // string getName();
         int getDaysInFridge();
+        string getName()
+        {
+            return name;
+        }
 };
 
 class RawFood: public Food
