@@ -1,13 +1,26 @@
+#ifndef _STORAGE_H_
+#define _STORAGE_H_
+
 #include "food.h"
+#include <string>
 #include <vector>
+
+using namespace std;
 
 class Storage {
     public:
-        Storage(int capacity, double spoilRate);
-        void addFood(); // Need to add parameter from food file
+        Storage(string name, int capacity, double spoilRate);
+        void addFood(Food food); // Parameter referencing #food.h file
+        void removeFood(string name);
+        string getName();
+        void displayItems(); // lookAtStorage
+    
     private:
+        string name;
         int capacity;
         double spoilRate;
         std::vector<Food> items;
 
 };
+
+#endif
