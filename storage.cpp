@@ -31,6 +31,10 @@ void Storage::addFood(Food& food)
     }
 }
 
+/*void Storage::removeFood(string name) {
+
+}*/
+
 void Storage::displayItems()
 {
     std::cout << "Storage:" << endl;

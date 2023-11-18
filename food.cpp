@@ -7,7 +7,7 @@ using namespace std;
 // food class with name of food and lifetime in fridge
 class Food
 {
-    protected:
+    private:
         string name;
         int lifetime;
     public:

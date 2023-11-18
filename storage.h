@@ -10,7 +10,7 @@ using namespace std;
 class Storage {
     public:
         Storage(string name, int capacity, double spoilRate);
-        void addFood(Food food); // Parameter referencing #food.h file
+        void addFood(Food& food); // Parameter referencing #food.h file
         void removeFood(string name);
         string getName();
         void displayItems(); // lookAtStorage
