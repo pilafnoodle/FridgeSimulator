@@ -9,18 +9,20 @@ class Food
 {
     private:
         string name;
+        string category;
         int lifetime;
-        int daysInFridge;
+        int daysInFridge=0;
 
     public:
-        Food(string,int);
+        Food(string,string);
+        string getName();
+        int getDaysInFridge();
 };
 
 class RawFood: public Food
 {
     public:
-        RawFood(string, int)
-        // name = n, lifetime = t
+        RawFood(string,string); 
 };
 
 class CookedFood: public Food
