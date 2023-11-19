@@ -15,6 +15,7 @@ class Storage {
         string getName();
         void displayItems(); // lookAtStorage
         void incrementDaysInStorage();
+        void checkSpoiled();
         std::vector<Food> items;
     
     private:

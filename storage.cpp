@@ -63,11 +63,14 @@ void Storage::displayItems()
     }
 }
 
-// void Storage::checkSpoiled(){
-//     for(unsigned i=0; i<items.size();i++){
-//         if(items.at(i).getLifetime()+this->spoilRate)
-//     }
-// }
+void Storage::checkSpoiled(){
+    for(unsigned i=0; i<items.size();i++){
+        if(((items.at(i).getLifetime()+this->lifetimeExtended))-(items.at(i).getDaysInFridge()-1)==0){
+            cout<<"oh no! Your "<<items.at(i).getName()<<" has spoiled. "<<endl;
+            removeFood(items.at(i).getName());
+        }
+    }
+}
 
 void Storage::incrementDaysInStorage(){
     for(unsigned i=0; i<items.size();i++){

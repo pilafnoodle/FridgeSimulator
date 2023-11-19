@@ -10,10 +10,10 @@ Food::Food(string n, string category){
     this->category=category;
     if(category=="1"){
         this->lifetime=4;
-    }if(category=="2"){
+    }if(category=="2"||category=="cooked"){
         this->lifetime=2;
     }if(category=="3"){
-        this->lifetime=3;
+        this->lifetime=1;
     }if(category=="4"){
         this->lifetime=100;
     }
@@ -25,6 +25,13 @@ RawFood::RawFood(string n, string category):Food(n,category){
     // this->category=category;
     // // this->lifetime=t;
 }
+
+// CookedFood::CookedFood(string n, string category):Food(n,category){
+//     // this->name=n;
+//     // this->category=category;
+//     // // this->lifetime=t;
+// }
+
 
 string Food::getName(){
     return name;
