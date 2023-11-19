@@ -15,7 +15,6 @@ class Food
 
     public:
         Food(string,string);
-        // string getName();
         int getDaysInFridge();
         string getName()
         {
