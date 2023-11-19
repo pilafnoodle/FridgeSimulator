@@ -1,33 +1,43 @@
-#include <iostream>
 #include <string>
 #include "food.h"
 #include <vector>
+#include <iostream>
 using namespace std;
 
-// food class with name of food and lifetime in fridge
-class Food
-{
-    private:
-        string name;
-        int lifetime;
-    public:
-        Food(string n, int t)
-        {
-            name = n;
-            lifetime = t;
-        }
-};
+// this constructor is the only thing that was originally in food
+Food::Food(string n, string category){
+    this->name=n;
+    this->category=category;
+    if(category=="1"){
+        this->lifetime=4;
+    }if(category=="2"){
+        this->lifetime=2;
+    }if(category=="3"){
+        this->lifetime=3;
+    }if(category=="4"){
+        this->lifetime=100;
+    }
+    // this->lifetime=t;
+}
 
-// raw food class that keeps track of the number of days in the fridge
-class RawFood: public Food
-{
-    public:
-        int daysInFridge;
-};
+RawFood::RawFood(string n, string category):Food(n,category){
+    // this->name=n;
+    // this->category=category;
+    // // this->lifetime=t;
+}
 
-// cooked food class with a vector array of ingredients
-class CookedFood: public Food
-{
-    public:
-        vector<RawFood> ingredients;
-};
+string Food::getName(){
+    return name;
+}
+
+int Food::getLifetime(){
+    return lifetime;
+}
+
+void Food::addOneDay(){
+    daysInFridge++;
+}
+
+int Food::getDaysInFridge(){
+    return daysInFridge;
+}
