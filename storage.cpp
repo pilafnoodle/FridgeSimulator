@@ -1,28 +1,35 @@
 #include <iostream>
 #include "storage.h"
 
-Storage::Storage(string name, int capacity, double spoilRate)
+Storage::Storage(string name, int capacity, double lifetimeExtended)
 {
     // Storage class::Constructor(capacity, spoilRate)
     this->name = name;
     this->capacity = capacity;
-    this->spoilRate = spoilRate;
+    this->lifetimeExtended = lifetimeExtended;
+
 }
 
-void Storage::addFood(Food &foodItem)
+string Storage::getName()
+{
+    return name;
+}
+
+void Storage::addFood(Food& food)
 {
     // Doesn't exceed capacity
     if (items.size() < capacity)
     {
-        items.push_back(foodItem);
+        items.push_back(food);
 
-        std::cout << "New addition: " << getName() << std::endl;
+        std::cout << "New addition: " << getName() << endl;
+
     }
 
     // Exceeds capacity
     else
     {
-        std::cout << "There is no space in the storage to add " << getName() << ".";
+        std::cout << "There is no space in the storage to add " << getName() << "."<<endl;
     }
 }
 
@@ -35,8 +42,7 @@ void Storage::removeFood(string name)
         if(items[i].getName() == name) {
             check = true;
             items.erase(items.begin() + i);
-
-            std::cout << "Removed food item " << name << std::endl;
+            std::cout << "Took out " << name << std::endl;
             --i;
             break;
         }
@@ -45,13 +51,42 @@ void Storage::removeFood(string name)
 
 void Storage::displayItems()
 {
-    std::cout << "Storage:" << endl;
-
+    std::cout << this->getName()<<"'s storage:" << endl;
     for (int i = 0; i < items.size(); i++)
     {
-        Food &item = items[i];
-
-        std::cout << item.getName() << std::endl;
-        // std::cout << item.getName() << endl;
+        std::cout << items.at(i).getName() << "-" <<items.at(i).getDaysInFridge()<<" days old";
+        if(this->getName()=="Freezer"){
+            cout<<", never expires. "<<endl;
+        }else{
+            cout<<", expiring in "<<(items.at(i).getLifetime()+this->lifetimeExtended)-items.at(i).getDaysInFridge()<<" days"<<endl;
+        }
     }
 }
+
+// void Storage::checkSpoiled(){
+//     for(unsigned i=0; i<items.size();i++){
+//         if(items.at(i).getLifetime()+this->spoilRate)
+//     }
+// }
+
+void Storage::incrementDaysInStorage(){
+    for(unsigned i=0; i<items.size();i++){
+        items.at(i).addOneDay();
+    }
+}
+
+
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>. old
+// #include "Storage.h"
+// string Storage::getName(){
+//     return name;
+// }
+
+// Storage::Storage(string name,int capacity, double spoilRate){
+//     this->name=name;
+//     this->capacity=capacity;
+//     this->spoilRate=spoilRate;
+// }
