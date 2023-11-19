@@ -14,12 +14,13 @@ class Storage {
         void removeFood(string name);
         string getName();
         void displayItems(); // lookAtStorage
+        void incrementDaysInStorage();
+        std::vector<Food> items;
     
     private:
         string name;
         int capacity;
-        double spoilRate;
-        std::vector<Food> items;
+        double lifetimeExtended;
 
 };
 

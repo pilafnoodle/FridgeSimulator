@@ -16,7 +16,10 @@ class Food
     public:
         Food(string,string);
         string getName();
+        int getLifetime();
         int getDaysInFridge();
+        void addOneDay();
+
 };
 
 class RawFood: public Food
