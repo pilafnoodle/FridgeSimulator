@@ -8,28 +8,26 @@ Storage::Storage(string name, int capacity, double lifetimeExtended)
     this->capacity = capacity;
     this->lifetimeExtended = lifetimeExtended;
 
+
 }
 
-string Storage::getName()
-{
+string Storage::getName() {
     return name;
 }
 
-void Storage::addFood(Food& food)
+void Storage::addFood(Food food)
 {
     // Doesn't exceed capacity
     if (items.size() < capacity)
     {
         items.push_back(food);
-
-        std::cout << "New addition: " << getName() << endl;
-
+        // std::cout << "New addition: " << food.getItem();
+        // Exceeds capacity
     }
 
-    // Exceeds capacity
     else
     {
-        std::cout << "There is no space in the storage to add " << getName() << "."<<endl;
+        std::cout << "There is no space in the storage.";
     }
 }
 
@@ -51,9 +49,11 @@ void Storage::removeFood(string name)
 
 void Storage::displayItems()
 {
-    std::cout << this->getName()<<"'s storage:" << endl;
+    std::cout << "Storage:" << endl;
+
     for (int i = 0; i < items.size(); i++)
     {
+<<<<<<< HEAD
         std::cout << items.at(i).getName() << "-" <<items.at(i).getDaysInFridge()<<" days old";
         if(this->getName()=="Freezer"){
             cout<<", never expires. "<<endl;
@@ -93,3 +93,4 @@ void Storage::incrementDaysInStorage(){
 //     this->capacity=capacity;
 //     this->spoilRate=spoilRate;
 // }
+

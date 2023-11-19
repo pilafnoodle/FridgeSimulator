@@ -116,6 +116,7 @@ int main(){
                 case 'c':
                     cook(fridge,freezer,pantry);// implement this
                     break;
+
                 case 's':
                     endOfDay=true;
                     break;
@@ -141,7 +142,6 @@ int main(){
         fridge.displayItems();
         cout<<endl;
 
-        
     }
     return 0;
 }
