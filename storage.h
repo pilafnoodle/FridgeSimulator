@@ -18,8 +18,23 @@ class Storage {
     private:
         string name;
         int capacity;
-        double spoilRate;
+        // double spoilRate;
         std::vector<Food> items;
+};
+
+class Freezer: public Storage {
+    public:
+    Freezer(string food, int capacity, double spoilRate);
+};
+
+class Fridge: public Storage {
+    public:
+    Fridge(string food, int capacity, double spoilRate);
+};
+
+class Pantry: public Storage {
+    public:
+    Pantry(string food, int capacity, double spoilRate);
 };
 
 #endif

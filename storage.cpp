@@ -49,7 +49,9 @@ void Storage::displayItems()
 
     for (int i = 0; i < items.size(); i++)
     {
-        Food &item = items[i]; //
+        Food &item = items[i];
+
+        std::cout << item.getName() << std::endl;
         // std::cout << item.getName() << endl;
     }
 }
